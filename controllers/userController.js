@@ -75,8 +75,7 @@ const logOutUser = asyncHandler(async (req, res) => {
     expires: new Date(0),
   });
 
-  res.status(200)
-  throw new Error("You just loged out")
+  res.status(200).json({ message: "User logged out" });
 });
 
 const getUserProfile = asyncHandler(async (req, res) => {
